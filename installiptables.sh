@@ -1,26 +1,26 @@
 #!/bin/bash
 
-echo "Parando firewall..."
+echo "Stopping the firewall..."
 
 systemctl stop firewalld
 
-echo "Desabilitando firewall..."
+echo "Disabling the firewalld..."
 
 systemctl disable firewalld
 
-echo "Mascarando o firewall..."
+echo "Masking the firewall..."
 
 systemctl mask --now firewalld
 
-echo "Instalando o iptables"
+echo "Installing the Iptables"
 
 yum install -y iptables-services
 
-echo "Iniciando iptables..."
+echo "Starting the iptables..."
 
 systemctl start iptables
 
-echo "Habilitando o iptable..."
+echo "Enabling the iptables..."
 
 systemctl enable iptables
 
